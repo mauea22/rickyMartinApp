@@ -1,10 +1,4 @@
 import { Component } from '@angular/core';
-import * as pdfMake from "pdfmake/build/pdfmake";
-import * as pdfFonts from 'pdfmake/build/vfs_fonts';
-(<any>pdfMake).vfs = pdfFonts.pdfMake.vfs;
-
-
-
 
 @Component({
   selector: 'app-root',
@@ -14,7 +8,8 @@ import * as pdfFonts from 'pdfmake/build/vfs_fonts';
 export class AppComponent {
   title = 'Mauro Allena';
 
+  cities = ['Barcelona', 'Madrid', 'Lima', 'Buenos Aires'];
 
-
+  name!:string;
 
 }
