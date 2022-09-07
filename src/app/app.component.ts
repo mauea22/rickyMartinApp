@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import * as pdfMake from "pdfmake/build/pdfmake";
+import * as pdfFonts from 'pdfmake/build/vfs_fonts';
+(<any>pdfMake).vfs = pdfFonts.pdfMake.vfs;
 
 
 
@@ -9,5 +12,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'rickyMartinApp';
+  title = 'Mauro Allena';
+
+
+
+
 }
