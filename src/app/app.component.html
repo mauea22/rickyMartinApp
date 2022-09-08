@@ -2,7 +2,18 @@
   <p *ngIf="name"> El nombre es: {{name}}</p>
   <input type="text" [(ngModel)]="name" >
 
+<h2>[ngClass]</h2>
+<ul *ngFor="let city of cities">
+  <!-- <li [ngClass]="['selected', 'blue']">{{city}}</li> -->
+  <!-- <li [ngClass]="'selected'">{{city}}</li> -->
+  <!-- <li [ngClass]="{'selected': false}">{{city}}</li> -->
+  <!-- <li [ngClass]="{'selected': city =='Barcelona'}">{{city}}</li> -->
+  <li [ngClass]="{'selected': city =='Barcelona', 'blue': city === 'Madrid'}">{{city}}</li>
+</ul>
+<hr>
+
+<h2>[ngStyle]</h2>
 
 <ul *ngFor="let city of cities">
-  <li>{{city}}</li>
+  <li [ngStyle]="{color: 'red'}">{{city}}</li>
 </ul>
